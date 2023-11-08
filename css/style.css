@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+:root {
+  --title-color: #614120;
+}
+
+body {
+  overflow-x: hidden;
+  margin: auto;
+}
+
+.header__img {
+  position: relative;
+}
+
+.header__title {
+  position: absolute;
+  top: 25vh;
+  right: 6vw;
+  z-index: 1;
+  font-size: 12rem;
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.header__img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
