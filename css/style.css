@@ -27,6 +27,19 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--subtitle-color);
+  border-radius: 0.07em;
+}
+
 img {
   height: 100%;
 }
