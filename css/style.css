@@ -10,7 +10,7 @@
   --accent-color: #73ab84;
   --subtitle-size: 1.4rem;
   --page-max-width: 650px;
-  --section-margin: 3em;
+  --section-margin: 5em;
 }
 
 /* General */
@@ -61,7 +61,7 @@ img {
 }
 
 .article-paragraph {
-  line-height: 1.5;
+  line-height: 1.65;
   margin-bottom: 3em;
 }
 
@@ -78,13 +78,13 @@ img {
   color: var(--title-color);
   font-size: var(--title-size);
   font-family: "Anton", sans-serif;
-  margin-bottom: 0.65em;
+  margin-bottom: 1em;
 }
 
 .section-subtitle {
   color: var(--title-color);
   font-size: var(--subtitle-size);
-  margin-bottom: 0.6em;
+  margin-bottom: 0.8em;
 }
 
 /* Header */
@@ -144,12 +144,16 @@ img {
 }
 
 /* Introduction */
+.introduction {
+  margin-bottom: calc(var(--section-margin) * 0.4);
+}
+
 .introduction__img {
   margin-top: 1em;
   width: 35%;
   float: right;
   shape-outside: url(../assets/img/goggins-sitting.png);
-  shape-margin: 1.1em;
+  shape-margin: 0.6em;
 }
 
 /* Childhood */
@@ -192,6 +196,7 @@ img {
 }
 
 /* Transformation */
+
 .transformation__figure {
   margin-left: auto;
   margin-right: auto;
@@ -208,16 +213,27 @@ img {
 
 .transformation__figure {
   max-width: 70%;
+  margin-top: -1em;
+  margin-bottom: 2.5em;
 }
 
 /* Badass */
-.badass__ultra-container {
-  display: flex;
-  gap: 2em;
+.badass__subtitle {
+  margin-bottom: 1.2em;
 }
 
-.badass__img {
-  width: 40%;
+.badass__ultra-container {
+  display: flex;
+  gap: 1.8em;
+}
+
+.badass__figure {
+  width: 45%;
+  height: 100%;
+}
+
+.badass__paragraph--ultra {
+  width: 55%;
 }
 
 /* Sources */
