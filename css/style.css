@@ -152,9 +152,47 @@ img {
   shape-margin: 1.1em;
 }
 
+/* Childhood */
+.childhood__after-escape-container {
+  position: relative;
+}
+
+@keyframes bg-color {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50vh - var(--page-max-width)));
+  }
+}
+
+.childhood__gun-img {
+  float: right;
+  width: 30%;
+  shape-outside: url("../assets/img/gun.png");
+  shape-margin: 1em;
+  margin-left: 1em;
+  margin-top: 43px;
+}
+
+.childhood__bullet-img {
+  position: absolute;
+  height: 20px;
+  /* transform: scale(0.07); */
+  top: 52px;
+  right: 100px;
+  z-index: -1;
+  animation: bg-color linear both;
+  animation-timeline: view(10%);
+}
+
+.childhood__paragraph-first-part {
+  margin-bottom: 1.5em;
+  display: block;
+}
+
 /* Transformation */
-.transformation__figure,
-.badass__figure {
+.transformation__figure {
   margin-left: auto;
   margin-right: auto;
   color: var(--subtitle-color);
