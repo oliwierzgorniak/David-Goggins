@@ -14,7 +14,6 @@
 }
 
 /* General */
-
 html {
   scroll-behavior: smooth;
 }
@@ -88,7 +87,6 @@ img {
 }
 
 /* Header */
-
 .header {
   position: relative;
 }
@@ -132,15 +130,53 @@ img {
 
 .header__link {
   text-decoration: none;
-  font-size: 1.4rem;
   cursor: pointer;
   color: var(--accent-color);
 }
 
 .header__link-text {
   text-decoration: underline;
-  font-size: 1.25rem;
   letter-spacing: 0.03em;
+}
+
+@keyframes arrow-move {
+  0% {
+    transform: translateY(0);
+  }
+
+  2% {
+    transform: translateY(0.3rem);
+  }
+
+  4% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header__link-arrow {
+  display: inline-block;
+  font-size: 1.4rem;
+  animation: arrow-move 10s ease-in infinite;
+}
+
+.header__link-arrow--1 {
+  animation-delay: 2s;
+}
+
+.header__link-arrow--2 {
+  animation-delay: 4s;
+}
+
+.header__link-arrow--3 {
+  animation-delay: 6s;
+}
+
+.header__link-arrow--4 {
+  animation-delay: 8s;
 }
 
 /* Introduction */
@@ -176,14 +212,14 @@ img {
   shape-outside: url("../assets/img/gun.png");
   shape-margin: 1em;
   margin-left: 1em;
-  margin-top: 43px;
+  margin-top: 48px;
 }
 
 .childhood__bullet-img {
   position: absolute;
-  height: 20px;
+  height: 16px;
   /* transform: scale(0.07); */
-  top: 52px;
+  top: 58px;
   right: 100px;
   z-index: -1;
   animation: bg-color linear both;
