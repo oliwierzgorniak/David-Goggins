@@ -146,3 +146,26 @@ img {
 .badass__figure {
   max-width: 40%;
 }
+
+/* Sources */
+.sources__title {
+  font-size: calc(var(--title-size) * 0.7);
+  font-family: "Anton", sans-serif;
+  color: var(--subtitle-color);
+  margin-bottom: 0.5em;
+}
+
+.sources__list {
+  padding-left: 1.2em;
+}
+
+.sources__source {
+  font-size: 0.7rem;
+  margin-bottom: 0.6em;
+  list-style-type: circle;
+  line-height: 1.4;
+}
+
+.sources__source a {
+  color: var(--text-color);
+}
