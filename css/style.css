@@ -7,9 +7,16 @@
   --title-color: #996633;
   --title-size: 2rem;
   --subtitle-color: #996633;
+  --accent-color: #73ab84;
   --subtitle-size: 1.3rem;
   --page-max-width: 1000px;
   --section-margin: 3em;
+}
+
+/* General */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,6 +30,10 @@ body {
 .header,
 .article-section {
   margin-bottom: var(--section-margin);
+}
+
+.article-section {
+  padding-top: 1.5em;
 }
 
 .header__nav,
@@ -59,6 +70,8 @@ body {
   margin-bottom: 0.4em;
 }
 
+/* Header */
+
 .header {
   position: relative;
 }
@@ -82,4 +95,26 @@ body {
   height: 100vh;
   width: 100%;
   object-fit: cover;
+}
+
+/* Navigation */
+.header__list-element {
+  margin-bottom: 0.5em;
+}
+
+.header__list-element:last-child {
+  margin-bottom: 0;
+}
+
+.header__link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.header__link-text {
+  text-decoration: underline;
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
 }
