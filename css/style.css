@@ -288,7 +288,7 @@ img {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-50vh - var(--page-max-width)));
+    transform: translateX(calc(-50vw - var(--page-max-width)));
   }
 }
 
@@ -298,39 +298,27 @@ img {
   shape-outside: url("../assets/img/gun.png");
   shape-margin: 1em;
   margin-left: 1em;
-  margin-top: 48px;
 }
 
 .childhood__bullet-img {
   position: absolute;
   height: 16px;
-  /* transform: scale(0.07); */
-  top: 58px;
+  top: 8px;
   right: 100px;
   z-index: -1;
   animation: bg-color linear both;
   animation-timeline: view(10%);
 }
 
-.childhood__paragraph-first-part {
-  margin-bottom: 1.5em;
+.childhood__paragraph--escape {
+  padding-top: 2em;
   display: block;
 }
 
 @media screen and (max-width: calc(650px + 100px)) {
-  .childhood__paragraph-first-part {
-    margin-bottom: 0;
-    display: inline;
-  }
-
-  .childhood__bullet-img {
-    display: none;
-  }
-
   .childhood__gun-img {
     width: 60%;
     shape-margin: 0.4em;
-    margin-top: 0.25em;
     max-width: 12rem;
   }
 }
