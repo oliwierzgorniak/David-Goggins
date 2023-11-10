@@ -120,6 +120,33 @@ img {
   color: var(--title-color);
 }
 
+@keyframes arrow-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(0.8em);
+  }
+
+  30% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header__arrow-icon {
+  position: absolute;
+  bottom: 1.8em;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4em;
+  animation: arrow-down 2s ease-in infinite;
+}
+
 @media screen and (max-width: 1100px) {
   .header__img {
     object-position: 30%;
