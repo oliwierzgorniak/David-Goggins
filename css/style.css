@@ -2,7 +2,7 @@
 
 :root {
   --title-color: #614120;
-  --background-color: #000;
+  --background-color: #121212;
   --text-color: #f5f5f5;
   --title-color: #996633;
   --title-size: 2rem;
@@ -57,6 +57,16 @@ img {
   max-width: var(--page-max-width);
   margin-left: auto;
   margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 570px) {
+  .header__nav,
+  .article-section {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
 .article-paragraph {
@@ -87,16 +97,20 @@ img {
 }
 
 /* Header */
-.header {
+.header__container {
   position: relative;
-}
-
-.header__img {
+  height: 100vh;
   margin-bottom: var(--section-margin);
 }
 
-.header__title {
+.header__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.header__text-container {
   position: absolute;
+  z-index: 10;
   top: 25vh;
   right: 6vw;
   z-index: 1;
@@ -106,10 +120,37 @@ img {
   color: var(--title-color);
 }
 
-.header__img {
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
+@media screen and (max-width: 1100px) {
+  .header__img {
+    object-position: 30%;
+  }
+
+  .header__title {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .header__text-container {
+    font-size: 5rem;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff50;
+    backdrop-filter: blur(10px);
+    padding: 0.2em;
+    border-top-right-radius: 0.02em;
+    color: var(--title-color);
+    width: min-content;
+  }
+
+  .header__title {
+    filter: brightness(0.6);
+  }
+
+  .header__img {
+    object-position: 5% 0;
+  }
 }
 
 /* Navigation */
@@ -185,11 +226,29 @@ img {
 }
 
 .introduction__img {
-  margin-top: 1em;
+  margin: 1em 0 1em 1em;
   width: 35%;
   float: right;
   shape-outside: url(../assets/img/goggins-sitting.png);
   shape-margin: 0.6em;
+}
+
+@media screen and (max-width: 530px) {
+  .introduction__container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .introduction__container p {
+    margin-bottom: 1em;
+  }
+
+  .introduction__img {
+    margin-top: 0;
+    width: 100%;
+    max-width: 15rem;
+  }
 }
 
 /* Childhood */
@@ -231,26 +290,40 @@ img {
   display: block;
 }
 
-/* Transformation */
+@media screen and (max-width: calc(650px + 100px)) {
+  .childhood__paragraph-first-part {
+    margin-bottom: 0;
+    display: inline;
+  }
 
+  .childhood__bullet-img {
+    display: none;
+  }
+
+  .childhood__gun-img {
+    width: 60%;
+    shape-margin: 0.4em;
+    margin-top: 0.25em;
+    max-width: 12rem;
+  }
+}
+
+/* Transformation */
 .transformation__figure {
   margin-left: auto;
   margin-right: auto;
   color: var(--subtitle-color);
   text-align: center;
   font-size: 1.1rem;
+  width: 80%;
+  margin-top: -1em;
+  margin-bottom: 2.5em;
 }
 
 .transformation__img,
 .badass__img {
   width: 100%;
   margin-bottom: 0.4em;
-}
-
-.transformation__figure {
-  max-width: 70%;
-  margin-top: -1em;
-  margin-bottom: 2.5em;
 }
 
 /* Badass */
@@ -266,12 +339,29 @@ img {
 .badass__figure {
   width: 45%;
   height: 100%;
+  color: var(--subtitle-color);
+  text-align: center;
+  font-size: 1.1em;
 }
 
 .badass__paragraph--ultra {
   width: 55%;
 }
 
+@media screen and (max-width: calc(650px + 2em)) {
+  .badass__ultra-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .badass__paragraph--ultra {
+    width: unset;
+  }
+
+  .badass__figure {
+    width: 70%;
+  }
+}
 /* Sources */
 .sources__title {
   font-size: calc(var(--title-size) * 0.7);
